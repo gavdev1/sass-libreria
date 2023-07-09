@@ -1,0 +1,20 @@
+{
+  "name": "sass-libreria",
+  "version": "1.0.0",
+  "description": "Sass libreria que uso en mis proyectos, contiene un reset de los estilos, mixin y en el aparatado de reset se agregan todos los estilos que se pueden volver a utilizar.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w src/style.scss build/css/style.css"
+  },
+  "keywords": [
+    "SASS",
+    "mixin",
+    "CSS",
+    "UI"
+  ],
+  "author": "Gabriel Acero",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}

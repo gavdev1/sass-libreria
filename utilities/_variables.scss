@@ -1,0 +1,24 @@
+//Colores
+$palette: (
+  "primary": #8be23d,
+  "primary-alt": hsl(228, 66%, 47%),
+  "primary-light": hsl(228, 62%, 59%),
+  "secondary": hsl(25, 83%, 53%),
+  "title-color":hsl(228, 57%, 28%),
+  "text-color": hsl(228, 15%, 50%),
+  "text-color-light": hsl(228, 12%, 75%),
+  "container-color": hsl(228, 99%, 98%),
+  "dark": #000,
+  "white": #fff
+);
+
+
+//breakpoints media query
+$breakpoints: (
+  "2sm": 460px,
+  "sm": 768px,
+  "md": 1000px,
+  "lg": 1440px,
+  "xl": 2000px
+);
+

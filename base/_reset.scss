@@ -1,0 +1,90 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../mixin" as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: getColor("dark");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.text {
+  width: 75%;
+  margin: 1em auto;
+
+  @include breakpoints("sm") {
+    width: 100%;
+  }
+}
+
+.image {
+  @include image();
+}
+
+.center{
+  text-align: center;
+}
+
+.container {
+  @include container(1100px, 0, 1em);
+}
+
+.title {
+  @include title("dark", 2em, .4em);
+}
+
+.title::after{
+  content: "";
+  background-color: getColor("primary");
+  display: block;
+  width: 120px;
+  height: 20px;
+  margin: 0 auto;
+  transform: skewY(-20deg) rotate(20deg);
+}
+
+.title--small {
+  @include title("dark", 1.3em, .4em);
+  margin-block: 1em;
+}
+
+
+.btn-primary {
+  @include button(null, .5em, 2em, "black", "primary", bold);
+  @include flex(inline-flex, null, null, null, center, center);
+  @include transiciones(.6s, background-color);
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  box-shadow: getColor("primary") 0px 3px 8px;
+}
+
+.btn-primary:hover{
+  background-color: lighten(getColor("primary"), 10);
+}
+
+.btn-icon{
+  font-size: 1.5em;
+}
